@@ -82,6 +82,7 @@ servo -20    → Move servo from neutral
 
 
 ## Selected Hardware
+
 The following components were chosen for their cost-effectiveness, accuracy, and ease of integration:
 
 | Component            | Description                                                             |
@@ -97,19 +98,31 @@ The following components were chosen for their cost-effectiveness, accuracy, and
 
 
 ## Repository Contents
+
 PID-Controlled-One-Axis-Ball-Balancing-System.ino – Core Arduino code
+
 Project_Proposal.pdf – Initial planning
+
 Project_Presentation.pptx – Final presentation
+
 Project_Report.pdf – Detailed documentation
+
 Demo Video.mp4 – Final working demo
+
 Circuit Diagram.jpg – Full wiring reference
+
 Project Picture.jpg – Real setup snapshot
 
 ## Tech Stack
+
 Arduino Uno
+
 HC-SR04 Ultrasonic Sensor
+
 SG90 Servo Motor
+
 Serial Monitor for tuning
+
 PID algorithm (manual tuning)
 
 ## Results
