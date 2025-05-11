@@ -12,13 +12,14 @@ PID-based one-axis ball balancing robot using Arduino. Uses an ultrasonic sensor
 
 ## 🖼️ Project Overview
 
-![System Diagram](Diagram.jpg)
+![System Diagram](https://github.com/user-attachments/assets/e33825f7-6d91-482a-a78f-bae0202825ad)
 
 ---
 
 ## 🧪 Final Project Hardware
 
-![Project Demo](Project%20Picture.jpg)
+![Hardware Picture](https://github.com/user-attachments/assets/bba11d44-11db-466e-87f8-a5fb8f7e8e28)
+![Demo Picture](https://github.com/user-attachments/assets/29c81f89-d5f8-407b-894e-4baf11304527)
 
 ---
 
@@ -34,19 +35,19 @@ PID-based one-axis ball balancing robot using Arduino. Uses an ultrasonic sensor
 
 ## 🛠️ System Architecture
 
-![Control Flowchart](Flowchart.jpg)
+![Control Flowchart](https://github.com/user-attachments/assets/263df03a-542a-4b32-a460-1ca02b46cdc8)
 
 ---
 
 ## 📽️ Demo
 
-▶️ [Watch the demo video](Demo%20Video.mp4)
+[Watch the demo video](https://github.com/user-attachments/assets/57880886-e9d0-444b-b646-2edba7fcaea7)
 
 ---
 
 ## 🔌 Circuit Diagram
 
-![Circuit Diagram]([Cicuit%20Diagram.jpg](https://private-user-images.githubusercontent.com/136043829/442520977-e3dad300-d6cb-4af6-aade-47ac2f2e7ccd.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDY5ODI2NjEsIm5iZiI6MTc0Njk4MjM2MSwicGF0aCI6Ii8xMzYwNDM4MjkvNDQyNTIwOTc3LWUzZGFkMzAwLWQ2Y2ItNGFmNi1hYWRlLTQ3YWMyZjJlN2NjZC5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNTExJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDUxMVQxNjUyNDFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wN2I1ZWEwYzFkMGM1N2I0NjY3MThjYzcyMjJmYWVlNTVlNzRlMDQ3ZjdjYjZlMjUxNDcxYjRmYzMwNWU5MDBkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.CtrA26mFCOKvH8RFgj2JU-yzJYBwMhl8PFGloqlJdww)
+![Circuit Diagram](https://github.com/user-attachments/assets/14326457-f14b-4431-87fc-9c9ef3d380c3)
 
 ---
 
