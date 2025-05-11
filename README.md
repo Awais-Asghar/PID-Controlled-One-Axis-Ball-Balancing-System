@@ -1,57 +1,62 @@
+
 # PID-Controlled One-Axis Ball Balancing System
+
 ![Project Status](https://img.shields.io/badge/status-Completed-brightgreen.svg)
 ![Platform](https://img.shields.io/badge/platform-Arduino-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)
 ![PID Control](https://img.shields.io/badge/control-PID-orange.svg)
 
-
 PID-based one-axis ball balancing robot using Arduino. Uses an ultrasonic sensor and servo motor to stabilize a ball at a target distance. Real-time tuning of Kp, Ki, Kd via Serial. Includes stability detection and automatic neutral reset. The system stabilizes within 30s using empirically tuned parameters.
 
 ---
 
-## Project Overview
+## 🖼️ Project Overview
+
 ![System Diagram](Diagram.jpg)
 
 ---
 
-## Final Project Hardware
+## 🧪 Final Project Hardware
 
 ![Project Demo](Project%20Picture.jpg)
 
 ---
 
-## Features
+## ✨ Features
 
 - **PID Control** for dynamic stability.
 - **Real-time sensor feedback** using IR or ultrasonic sensors.
 - **Servo motor-driven beam** for accurate actuation.
 - **Low-cost microcontroller** implementation (Arduino/STM32).
 - **Serial Monitor & LCD** integration for live debugging.
+
 ---
 
 ## 🛠️ System Architecture
+
 ![Control Flowchart](Flowchart.jpg)
 
 ---
 
-## Demo
+## 📽️ Demo
 
-[Watch the demo video](Demo%20Video.mp4)
-
----
-## Cicuit Diagram
-
-![Circuit Diagram](Circuit%20Diagram.jpg) 
+▶️ [Watch the demo video](Demo%20Video.mp4)
 
 ---
 
-## Project Summary
+## 🔌 Circuit Diagram
+
+![Circuit Diagram](Cicuit%20Diagram.jpg)
+
+---
+
+## 🧾 Project Summary
 
 This Arduino-based system controls the position of a ball on a beam using **PID control** and real-time feedback from an ultrasonic sensor. The ball is returned to a setpoint by tilting the beam via a servo motor, compensating for positional error.
 
 ---
 
-## How It Works
+## ⚙️ How It Works
 
 1. **Sensing**: Ball position is measured using HC-SR04.
 2. **Filtering**: Distance values are filtered (moving average).
@@ -65,14 +70,21 @@ This Arduino-based system controls the position of a ball on a beam using **PID 
 
 ---
 
-## Control Strategy
-Implemented a classic PID (Proportional-Integral-Derivative) loop:
-Error = Desired Position - Actual Position
+## 🧠 Control Strategy
 
+A classic PID (Proportional-Integral-Derivative) loop is implemented:
+
+```
+Error = Desired Position - Actual Position  
 PID Output = Kp * Error + Ki * ∫Error + Kd * (dError/dt)
-Kp = 5, Ki = 0.01, Kd = 9
+```
 
-Tuned manually and iteratively for minimal overshoot and fast response.
+Final tuned values:
+- `Kp = 5`
+- `Ki = 0.01`
+- `Kd = 9`
+
+### Main Code Logic
 
 ```cpp
 error = distance - setpoint;
@@ -83,27 +95,27 @@ servoAngle = constrain(neutralAngle + output * 1.2, 0, 180);
 myServo.write(servoAngle);
 ```
 
-PID gains can be tuned in real-time via Serial commands.
-System resets if ball goes out of range or stabilizes.
-Neutral angle adjustment keeps the beam level
+- PID gains can be tuned via Serial commands.
+- System resets to neutral if error stabilizes or ball goes out of range.
 
+---
 
-## PID Tuning via Serial Monitor
-Example commands for real-time tuning:
+## 🧪 PID Tuning via Serial Monitor
 
+```text
 Kp 5         → Set proportional gain  
 Ki 0.01      → Set integral gain  
 Kd 9         → Set derivative gain  
 neutral 34   → Set neutral servo angle  
 servo -20    → Move servo from neutral
+```
 
+---
 
-## Hardware Components
-
-The following components were chosen for their cost-effectiveness, accuracy, and ease of integration:
+## 🔩 Hardware Components
 
 | Component            | Description                                                             |
-| -------------------- | ----------------------------------------------------------------------- |
+|----------------------|-------------------------------------------------------------------------|
 | **Beam**             | 30–50 cm acrylic/wood beam, pivot-mounted                               |
 | **Ball**             | Lightweight ping-pong ball                                              |
 | **Servo Motor**      | SG90 (light load) or MG996R (high torque)                               |
@@ -113,72 +125,68 @@ The following components were chosen for their cost-effectiveness, accuracy, and
 | **Optional Display** | 16x2 I2C LCD (PID values, position, error)                              |
 | **Accessories**      | Breadboard, jumpers, brackets, bearings, screws, etc.                   |
 
+---
 
-## Repository Contents
+## 📁 Repository Contents
 
-PID-Controlled-One-Axis-Ball-Balancing-System.ino – Core Arduino code
-
-Project_Proposal.pdf – Initial planning
-
-Project_Presentation.pptx – Final presentation
-
-Project_Report.pdf – Detailed documentation
-
-Demo Video.mp4 – Final working demo
-
-Circuit Diagram.jpg – Full wiring reference
-
-Project Picture.jpg – Real setup snapshot
-
-## Tech Stack
-
-Arduino Uno
-
-HC-SR04 Ultrasonic Sensor
-
-SG90 Servo Motor
-
-Serial Monitor for tuning
-
-PID algorithm (manual tuning)
-
-## Results
-The system achieved stable control within 30 seconds of a disturbance.
-Final PID gains: Kp = 5, Ki = 0.01, Kd = 9
-Stability monitoring ensures no unnecessary servo actuation.
-
-## Future Enhancements
-2-axis (X-Y) platform.
-
-Vision-based tracking using OpenCV or infrared grids.
-
-Self-tuning adaptive PID or machine learning-based control.
-
-Wireless monitoring via Bluetooth/Wi-Fi.
-
-Simulation-first development using MATLAB or Python.
-
-## Authors
-
-This project was created at **National University of Sciences & Technology (NUST)** as part of the **Linear Control Systems** course project by:
-
-
-1. Awais Asghar  
-2. Muhammad Ashar Javid  
-3. Ameer Hamza  
-4. Muhammad Hammad Sarwar  
+- `PID-Controlled-One-Axis-Ball-Balancing-System.ino` – Core Arduino code  
+- `Project_Proposal.pdf` – Initial planning  
+- `Project_Presentation.pptx` – Final presentation  
+- `Project_Report.pdf` – Detailed documentation  
+- `Demo Video.mp4` – Final working demo  
+- `Cicuit Diagram.jpg` – Wiring reference (check spelling)  
+- `Project Picture.jpg` – Setup image  
 
 ---
 
-## License
-This project is licensed under the MIT License.
+## 🧰 Tech Stack
 
-## References
-Åström & Hägglund, Advanced PID Control, ISA.
+- Arduino Uno  
+- HC-SR04 Ultrasonic Sensor  
+- SG90 Servo Motor  
+- Serial Monitor for real-time control  
+- PID control logic (manual tuning)
 
-Ogata, Modern Control Engineering, Pearson.
+---
 
-Arduino PID Library: PID Playground
+## ✅ Results
 
-MATLAB Control Toolbox: MathWorks Control Help!
+- System stabilized within **30 seconds** of a disturbance  
+- PID parameters: `Kp = 5`, `Ki = 0.01`, `Kd = 9`  
+- Stability detection reduces unnecessary movement
 
+---
+
+## 🚀 Future Enhancements
+
+- 2-axis (X-Y) balancing system  
+- Vision-based tracking using OpenCV or IR grid  
+- Self-tuning PID or ML-based control  
+- Wireless monitoring via Bluetooth/Wi-Fi  
+- MATLAB or Python-based simulation-first approach
+
+---
+
+## 👨‍💻 Authors
+
+This project was created at **National University of Sciences & Technology (NUST)** as part of the **Linear Control Systems** course project by:
+
+- Awais Asghar  
+- Muhammad Ashar Javid  
+- Ameer Hamza  
+- Muhammad Hammad Sarwar  
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**. See `LICENSE` file for details.
+
+---
+
+## 📚 References
+
+- Åström & Hägglund, *Advanced PID Control*, ISA  
+- Ogata, *Modern Control Engineering*, Pearson  
+- Arduino PID Library  
+- MathWorks MATLAB Control Toolbox  
