@@ -6,7 +6,13 @@ PID-based one-axis ball balancing robot using Arduino. Uses an ultrasonic sensor
 
 ## Project Overview
 
+
+## Cicuit Diagram
+
 ![Circuit Diagram](Circuit%20Diagram.jpg)
+
+## Final Project
+
 ![Project Demo](Project%20Picture.jpg)
 
 ---
