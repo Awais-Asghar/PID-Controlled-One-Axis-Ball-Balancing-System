@@ -4,7 +4,7 @@ PID-based one-axis ball balancing robot using Arduino. Uses an ultrasonic sensor
 
 ---
 
-## 📷 Project Overview
+## Project Overview
 
 ![Circuit Diagram](Circuit%20Diagram.jpg)
 ![Project Demo](Project%20Picture.jpg)
@@ -25,7 +25,7 @@ This project was created at **National University of Sciences & Technology (NUST
 
 ## Demo
 
-📹 [Watch the demo video](Demo%20Video.mp4)
+[Watch the demo video](Demo%20Video.mp4)
 
 ---
 
@@ -61,18 +61,13 @@ myServo.write(servoAngle);
 ```
 
 PID gains can be tuned in real-time via Serial commands.
-
 System resets if ball goes out of range or stabilizes.
-
 Neutral angle adjustment keeps the beam level
 
 
-##PID Tuning via Serial Monitor
+## PID Tuning via Serial Monitor
 Example commands for real-time tuning:
 
-text
-Copy
-Edit
 Kp 5         → Set proportional gain  
 Ki 0.01      → Set integral gain  
 Kd 9         → Set derivative gain  
@@ -80,7 +75,7 @@ neutral 34   → Set neutral servo angle
 servo -20    → Move servo from neutral
 
 
-##Selected Hardware
+## Selected Hardware
 The following components were chosen for their cost-effectiveness, accuracy, and ease of integration:
 
 | Component            | Description                                                             |
@@ -95,7 +90,7 @@ The following components were chosen for their cost-effectiveness, accuracy, and
 | **Accessories**      | Breadboard, jumpers, brackets, bearings, screws, etc.                   |
 
 
-##Repository Contents
+## Repository Contents
 PID-Controlled-One-Axis-Ball-Balancing-System.ino – Core Arduino code
 Project_Proposal.pdf – Initial planning
 Project_Presentation.pptx – Final presentation
@@ -104,14 +99,14 @@ Demo Video.mp4 – Final working demo
 Circuit Diagram.jpg – Full wiring reference
 Project Picture.jpg – Real setup snapshot
 
-##Tech Stack
+## Tech Stack
 Arduino Uno
 HC-SR04 Ultrasonic Sensor
 SG90 Servo Motor
 Serial Monitor for tuning
 PID algorithm (manual tuning)
 
-##Results
+## Results
 The system achieved stable control within 30 seconds of a disturbance.
 Final PID gains: Kp = 5, Ki = 0.01, Kd = 9
 Stability monitoring ensures no unnecessary servo actuation.
