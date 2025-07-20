@@ -3,10 +3,10 @@
 
 ![Project Status](https://img.shields.io/badge/status-Completed-brightgreen.svg)
 ![Platform](https://img.shields.io/badge/platform-Arduino-blue.svg)
-![Language](https://img.shields.io/badge/language-C%2FC%2B%2B-00599C.svg)
-![IDE](https://img.shields.io/badge/IDE-Arduino%20IDE-success.svg)
-![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)
+![Language](https://img.shields.io/badge/language-C%2FC%2B%2B-yellow.svg)
+![IDE](https://img.shields.io/badge/IDE-Arduino%20IDE-violet.svg)
 ![PID Control](https://img.shields.io/badge/control-PID-orange.svg)
+![License](https://img.shields.io/badge/license-MIT-lightgrey.svg)
 
 PID-based one-axis ball balancing robot using Arduino. Uses an ultrasonic sensor and servo motor to stabilize a ball at a target distance. Real-time tuning of Kp, Ki, Kd via Serial. Includes stability detection and automatic neutral reset. The system stabilizes within 30s using empirically tuned parameters.
 
